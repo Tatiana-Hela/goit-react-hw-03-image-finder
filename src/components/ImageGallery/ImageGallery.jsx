@@ -1,21 +1,25 @@
-// import css from '../ImageGallery/ImageGallery.module.css'
+import css from '../ImageGallery/ImageGallery.module.css';
 // import PropTypes from 'prop-types';
-// import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
-// const ImageGallery = ({ items }) => {
-//     return (
-//        <ul>
-//       {items.map(({ id, webformatURL, largeImageURL, tags }) => (
-//         <ImageGalleryItem 
-//           key={id}
-//           webformatURL={webformatURL}
-//           largeImageURL={largeImageURL}
-//           tags={tags}
-//         />
-//       ))}
-//     </ul>
-//     )
-// }
-// export default ImageGallery;
+import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
+
+const ImageGallery = ({ images, showImage }) => {
+  return (
+    <ul className={css.ImageGallery}>
+      {images.map(({ id, webformatURL, largeImageURL, tags }) => (
+        <ImageGalleryItem
+          key={id}
+          id={id}
+          tags={tags}
+          src={webformatURL}
+          largeImageURL={largeImageURL}
+          showImage={showImage}
+        />
+      ))}
+    </ul>
+  );
+};
+
+export default ImageGallery;
 
 // ImageGallery.propTypes = {
 //   items: PropTypes.arrayOf(

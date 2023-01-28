@@ -1,14 +1,19 @@
-// import css from '../ImageGalleryItem.module.css'
+import css from '../ImageGalleryItem/ImageGalleryItem.module.css';
 
-// const ImageGalleryItem = ({ items }) => {
-//   return (
-//     <>
-//       {items.map(({ id, webformatURL, largeImageURL, tags }) => {
-//         <li key={id}>
-//           <img src={webformatURL} alt={tags} />
-//         </li>;
-//       })}
-//     </>
-//   );
-// };
-// export default ImageGalleryItem;
+export const ImageGalleryItem = ({
+  id,
+  src,
+  largeImageURL,
+  tags,
+  showImage,
+}) => {
+  return (
+    <li
+      className={css.ImageGalleryItem}
+      key={id}
+      onClick={() => showImage({ tags, largeImageURL })}
+    >
+      <img className={css.ImageGalleryItemImage} src={src} alt={tags} />
+    </li>
+  );
+};
