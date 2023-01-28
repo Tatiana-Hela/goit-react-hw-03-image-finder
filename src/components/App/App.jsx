@@ -50,7 +50,7 @@ class SearchImages extends Component {
     return (
       <>
         <Searchbar onSubmit={searchImages} />
-        <ImageGallery items={items} />
+        {/* <ImageGallery items={items} /> */}
       </>
     );
   }
