@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { searchImages } from '../../services/image-api';
 import Searchbar from 'components/Searchbar/Searchbar';
-import ImageGallery from 'components/ImageGallery/ImageGallery';
+// import ImageGallery from 'components/ImageGallery/ImageGallery';
 // import css from '../App/App.module.css'
 
 class SearchImages extends Component {
@@ -45,7 +45,7 @@ class SearchImages extends Component {
   };
 
   render() {
-    const { items } = this.state;
+    // const { items } = this.state;
     const { searchImages } = this;
     return (
       <>
