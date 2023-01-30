@@ -1,5 +1,5 @@
 import css from '../ImageGallery/ImageGallery.module.css';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
 
 const ImageGallery = ({ images, showImage }) => {
@@ -21,13 +21,14 @@ const ImageGallery = ({ images, showImage }) => {
 
 export default ImageGallery;
 
-// ImageGallery.propTypes = {
-//   items: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number,
-//       webformatURL: PropTypes.string,
-//       largeImageURL: PropTypes.string,
-//       tags: PropTypes.string,
-//     })
-//   ).isRequired,
-// };
+ImageGallery.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      webformatURL: PropTypes.string,
+      largeImageURL: PropTypes.string,
+      tags: PropTypes.string,
+    })
+  ).isRequired,
+  showImage: PropTypes.func.isRequired,
+};

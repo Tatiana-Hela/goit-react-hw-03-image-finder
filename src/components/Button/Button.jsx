@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from '../Button/Button.module.css';
 
 const Button = ({ text, clickHeandler }) => {
@@ -8,3 +9,8 @@ const Button = ({ text, clickHeandler }) => {
   );
 };
 export default Button;
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  clickHeandler: PropTypes.func.isRequired,
+};
