@@ -97,7 +97,9 @@ class App extends Component {
         <Searchbar onSubmit={searchImages} />
         <ToastContainer position="top-right" autoClose={3000} />
 
-        <ImageGallery images={images} showImage={showImage} />
+        {images.length > 0 && (
+          <ImageGallery images={images} showImage={showImage} />
+        )}
         {error && (
           <p className={css.errorMessage}>
             Oops! Something went wrong. Try reloading the page

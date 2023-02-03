@@ -11,7 +11,6 @@ export const ImageGalleryItem = ({
   return (
     <li
       className={css.ImageGalleryItem}
-      key={id}
       onClick={() => showImage({ tags, largeImageURL })}
     >
       <img className={css.ImageGalleryItemImage} src={src} alt={tags} />
